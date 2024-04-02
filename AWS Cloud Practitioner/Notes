@@ -1,0 +1,17 @@
+AWS Regions:
+    Cluster of data centers
+    US-east-1, us-east-2 etc
+Things to be taken care while choosing a region:
+    1. Comply with government legal requirements
+    2. Proximity
+    3. Availability services within a region
+    4. Pricing
+
+Availability Zone:
+    one or more data centers connected with redudant power, networking
+    Min AZ: 3 for any region
+    AZ are isolated from each other and connected through a high bandwidth networking
+Shared Responsibility model:
+    Customer - responsible for Security IN the cloud
+    AWS - responsible for security OF the cloud
+
