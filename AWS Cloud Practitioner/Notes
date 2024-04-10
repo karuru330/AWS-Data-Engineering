@@ -15,3 +15,55 @@ Shared Responsibility model:
     Customer - responsible for Security IN the cloud
     AWS - responsible for security OF the cloud
 
+
+IAM 
+    - Global service
+    - Recommended to use IAM users for projects instead of main account
+IAM Policy structure:
+    - JSON document consists of version and statements
+    - statement consists of
+        - sid: statement id
+        - Effect: Allow/Deny
+        - Principal : to which all accounts/users/roles the policy applies to
+        - Action: list of actions policy allows/denies
+        - Resource: list of resources to which policy applies to
+MFA
+    Multi factor authentication - Your password + device
+    Virtual:
+        Google authenticator(phone only)
+        Authy(Amazon, multi-device supported)
+    Physical:
+        Universal 2nd Factor Security key: Yubikey
+    Hardware key Fob MFA device
+    Hardware key Fob MFA device for AWS GovCloud - by surepassID
+    
+Access AWS in 3 ways:
+    Console - protected by password + MFA
+    CLI - access through aws-cli. protected by Access keys
+    SDK - access through code. protected by access keys
+
+AWS CLI:
+    aws --version
+    aws configure
+        Enter access key
+        Enter access key value
+        Enter region name
+    aws iam list-users
+
+AWS CloudShell:
+    Region specific service
+    online CLI provided by aws
+    can create files, folders
+    can execute linux commands such as ls, pwd etc
+
+IAM Roles for services:
+
+    Roles can be created for aws services to access any other aws service
+
+IAM security tools:
+
+    IAM credentials report(account-level):
+        provides list of account users and status of credentials
+    IAM Access advisor (user-level):
+        provides list of users and their permissions and last accessed time
+
